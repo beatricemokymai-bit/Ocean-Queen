@@ -16,7 +16,7 @@
             <div class="nav-actions">
                 <button id="themeToggle" class="icon-btn" type="button" aria-label="Perjungti šviesią/tamsią temą">
                     <span id="themeIcon">☾</span>
-                </button>
+                </button> <audio id="oceanAudio" src="vandenynusargas.mp3"></audio>
                 <div class="lang-switcher" aria-label="Pasirinkti kalbą">
                     <button type="button" class="lang-btn active" data-lang="lt">LT</button>
                     <button type="button" class="lang-btn" data-lang="en">EN</button>
@@ -68,8 +68,10 @@
                     controls
                     poster="images/avataras.png"
                 >
-                    <source src="assets/video/avataras.mp4" type="video/mp4">
-                    <span data-i18n="video_fallback">Jūsų naršyklė nepalaiko HTML5 video.</span>
+                    <video class="result-video" controls poster="avataras.png">
+    <source src="avataras.mp4" type="video/mp4">
+    <span>Jūsų naršyklė nepalaiko HTML5 video.</span>
+</video>
                 </video>
             </div>
         </div>
@@ -97,4 +99,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
