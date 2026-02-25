@@ -35,7 +35,7 @@
                 <h3 data-i18n="step1_title">Nuotrauka</h3>
                 <p data-i18n="step1_text">Naudodamas AI įrankius (pvz., ChatGPT arba Gemini), sugeneravau avataro vizualą vandenynų tema.</p>
                 <div class="media-box">
-                    <img src="images/avataras.png.png" alt="Avataro pavyzdys" class="avatar-example">
+                    <img src="images/avataras.png" alt="Avataro pavyzdys" class="avatar-example">
                 </div>
             </div>
 
@@ -43,7 +43,7 @@
                 <div class="step-num">2</div>
                 <h3 data-i18n="step2_title">Audio įrašas</h3>
                 <p data-i18n="step2_text">Paruošiau tekstą apie vandenynų išsaugojimą ir paverčiau jį balsu per ElevenLabs.</p>
-                <button type="button" id="audioBtn">
+                <button type="button" id="audioBtn"> <audio id="oceanAudio" src="vandenynusargas.mp3"></audio>
                     <span class="audio-btn-label" data-i18n="audio_play">Klausyti garso</span>
                     <span class="audio-btn-bars" aria-hidden="true">
                         <span></span>
@@ -66,7 +66,7 @@
                 <video
                     class="result-video"
                     controls
-                    poster="images/avataras.png.png"
+                    poster="images/avataras.png"
                 >
                     <source src="assets/video/avataras.mp4" type="video/mp4">
                     <span data-i18n="video_fallback">Jūsų naršyklė nepalaiko HTML5 video.</span>
@@ -97,3 +97,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
