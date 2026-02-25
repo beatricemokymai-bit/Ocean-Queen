@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avataro kūrimo procesas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ocean-overlay" aria-hidden="true"></div>
+    <div class="bubble-layer" aria-hidden="true"></div>
+
+    <div class="container">
+        <nav class="top-nav">
+            <div class="nav-logo">🌊 OceanAI</div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="icon-btn" type="button" aria-label="Perjungti šviesią/tamsią temą">
+                    <span id="themeIcon">☾</span>
+                </button>
+                <div class="lang-switcher" aria-label="Pasirinkti kalbą">
+                    <button type="button" class="lang-btn active" data-lang="lt">LT</button>
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <h1 data-i18n="title">AI Avataro Kūrimo Procesas</h1>
+            <p data-i18n="subtitle">Edukacinis gidas: nuo vaizdo iki kalbančio vandenynų sargo</p>
+        </header>
+
+        <div class="process-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h3 data-i18n="step1_title">Nuotrauka</h3>
+                <p data-i18n="step1_text">Naudodamas AI įrankius (pvz., ChatGPT arba Gemini), sugeneravau avataro vizualą vandenynų tema.</p>
+                <div class="media-box">
+                    <img src="images/avataras.png.png" alt="Avataro pavyzdys" class="avatar-example">
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h3 data-i18n="step2_title">Audio įrašas</h3>
+                <p data-i18n="step2_text">Paruošiau tekstą apie vandenynų išsaugojimą ir paverčiau jį balsu per ElevenLabs.</p>
+                <button type="button" id="audioBtn">
+                    <span class="audio-btn-label" data-i18n="audio_play">Klausyti garso</span>
+                    <span class="audio-btn-bars" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <div class="waveform" aria-hidden="true">
+                    <svg viewBox="0 0 120 30" preserveAspectRatio="none">
+                        <path d="M0 15 Q 5 5 10 15 T 20 15 T 30 15 T 40 15 T 50 15 T 60 15 T 70 15 T 80 15 T 90 15 T 100 15 T 110 15 T 120 15" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="step-card highlight">
+                <div class="step-num">3</div>
+                <h3 data-i18n="step3_title">Video rezultatas</h3>
+                <p data-i18n="step3_text">Sujungiau nuotrauką ir audio naudodamas D-ID arba HeyGen įrankį.</p>
+                <video
+                    class="result-video"
+                    controls
+                    poster="images/avataras.png.png"
+                >
+                    <source src="assets/video/avataras.mp4" type="video/mp4">
+                    <span data-i18n="video_fallback">Jūsų naršyklė nepalaiko HTML5 video.</span>
+                </video>
+            </div>
+        </div>
+
+        <section class="summary-section">
+            <h2 class="summary-title" data-i18n="summary_title">
+                Kaip sukurti savo skaitmeninį vandenyno sargą?
+            </h2>
+            <p class="summary-body" data-i18n-html="summary_text">
+                Sukurti unikalų <span class="summary-keyword">AI avatarą</span> yra paprasčiau nei atrodo.
+                Visas procesas prasideda nuo vizualinės idėjos – naudodami
+                <span class="summary-keyword">ChatGPT</span> arba <span class="summary-keyword">Gemini</span>
+                aprašome savo viziją. Gavę vaizdą, suteikiame jam balsą per
+                <span class="summary-keyword">ElevenLabs</span>. Galiausiai, pasitelkiame
+                <span class="summary-keyword">D-ID</span> arba <span class="summary-keyword">HeyGen</span>
+                įrankius, kurie sujungia viską į gyvą, kalbantį avatarą!
+            </p>
+        </section>
+
+        <footer>
+            <button id="finalBtn" type="button" data-i18n="final_button">Proceso apžvalga</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
